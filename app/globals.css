@@ -40,7 +40,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
 
-    --blue: #007bff;
+    --blue-color: #0369a1;
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -79,4 +79,28 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Add this at the end of your globals.css file */
+/* Hide only the "Secured by Clerk" text */
+.cl-internal-b3fm6y > div:last-child {
+  display: none !important;
+}
+
+/* Ensure the "Don't have an account?" text remains visible */
+.cl-internal-b3fm6y > div:first-child {
+  display: block !important;
+}
+
+/* Add some padding to the bottom if needed */
+.cl-card {
+  padding-bottom: 1rem !important;
+}
+
+/* Add this to the end of your globals.css file */
+.cl-logoBox img {
+  max-width: 100%;
+  height: auto;
+  max-height: 80px; /* Adjust this value as needed */
+  object-fit: contain;
 }
