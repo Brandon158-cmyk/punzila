@@ -56,7 +56,13 @@ export async function AppNavbar({ points = 0 }: AppNavbarProps) {
             <span className="text-sm font-medium text-sky-900">
               {user?.username || user?.fullName}
             </span>
-            <UserButton />
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-8 h-8",
+                },
+              }}
+            />
           </div>
         ) : (
           <SignInButton mode="modal">

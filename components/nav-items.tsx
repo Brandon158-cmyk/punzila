@@ -22,9 +22,9 @@ export function NavItems({
         >
           <Link
             href={item.url}
-            className="min-w-8 flex h-8 flex-1 items-center gap-2 overflow-hidden rounded-md px-1.5 text-sm font-medium outline-none ring-ring transition-all hover:bg-accent hover:text-accent-foreground focus-visible:ring-2"
+            className="min-w-8 flex h-8 flex-1 items-center gap-2 overflow-hidden rounded-md px-1.5 text-sm  outline-none ring-ring transition-all hover:bg-accent hover:text-accent-foreground focus-visible:ring-2"
           >
-            <item.icon className="h-4 w-4 shrink-0" />
+            <item.icon className="h-4 w-4 shrink-0 text-[#0369a1]" />
             <div className="flex flex-1 overflow-hidden">
               <div className="line-clamp-1">{item.name}</div>
             </div>

@@ -181,10 +181,7 @@ const SidebarLabel = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={cn(
-        "px-1.5 text-xs font-medium text-muted-foreground",
-        className
-      )}
+      className={cn("px-1.5 text-xs text-muted-foreground", className)}
       {...props}
     />
   );

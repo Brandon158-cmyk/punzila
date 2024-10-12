@@ -10,7 +10,7 @@ export function NavLogo() {
         alt={sidebarRoutes.logo.name}
         width={82}
         height={40}
-        className="py-2"
+        className="pt-6"
       />
     </div>
   );

@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +32,7 @@ export default function RootLayout({
         elements: {
           card: "shadow-xl",
           modalBackdrop: "backdrop-blur-md",
-          headerTitle: "text-2xl",
+          headerTitle: "text-2xl font-bold",
           formButtonPrimary: "rounded-full",
           formButtonSecondary: "rounded-full",
           socialButtonsIconButton: "rounded-full",
@@ -48,9 +43,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${roboto.variable} font-sans antialiased`}>
           {children}
         </body>
       </html>
